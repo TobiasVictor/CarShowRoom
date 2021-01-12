@@ -1,0 +1,26 @@
+﻿@model IEnumerable<CarShowRoom.Models.ShowRoomViewModels.CommandGroup>
+@{
+    ViewData["Title"] = "Ordered Books Statistics";
+}
+<h2>Commanded Cars Statistics</h2>
+<table>
+    <tr>
+        <th>
+            Command Date
+        </th>
+        <th>
+            Commanded Cars
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CommandDate)
+            </td>
+            <td>
+                @item.CarCount
+            </td>
+        </tr>
+    }
+</table>
